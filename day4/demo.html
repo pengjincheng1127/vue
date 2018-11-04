@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 判断字符串中重复出现次数最多的字符并求出重复的次数
+
+var str = 'qqwewrertetetetet'
+var obj = {};
+// obj.q= 0; 
+// obj.q++
+// obj.w =0
+// obj.e =0;
+// obj.w++
+    for(var i=0;i<str.length;i++) {
+        if(obj[str[i]]){
+            //若对象中存在该项，则证明之前已经给该项赋过值
+            // 直接进行 ++ 的操作即可
+            obj[str[i]]++
+        } else{
+            obj[str[i]] = 1;
+        }
+     
+    }
+     console.log(obj);
+    var max = 0; //假设  最大次数是0次
+    var maxStr = '';
+    for (var k in obj) {                
+        if (obj[k] > max) {
+            max = obj[k];
+           maxStr=k;
+        }
+    }
+   
+   console.log(maxStr)
+
+
+
+
+
+
+
+
+
+
+    // var str = "aaaaaaabbbbbbbccccccccccccc";
+    // var json = {};//定义对象，存储字符串中的字符及字符出现次数
+    // for (var i = 0; i < str.length; i++) {//循环字符串中的每一个字符
+    //     //判断json中是否存在str.charAt(i)这个值
+    //     if (!json[str.charAt(i)]) {//如果不存在
+    //         json[str.charAt(i)] = 1;//将其以键值对中键的形式存放在json中，其值为1
+    //     } else {
+    //         //如果已经存在
+    //         json[str.charAt(i)]++;//让这个字符的值加1，相当于次数加1，即多出现了一次
+    //     }
+    // }
+    // var wor = "";//定义wor变量存储出现次数最多的字符；
+    // var num = 0 
+    // for (var key in json) {//利.用for....in....遍历键值对，找到最大的值，即最多的次数
+    //                         //判断当前json中的键值，如果大于num，则讲其重新赋值给num,并将其对应的键赋值给wor
+    //     if (json[key] > num) {
+    //         num = json[key];
+    //         char = key;
+    //     }
+    // }
+    // console.log(json)
+</script>
+</html>

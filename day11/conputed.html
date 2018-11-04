@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 需求 input 输入的内容  下边要跟着变化 而且是翻转过来的展示 -->
+        <!-- <input type="text" v-model='name'>
+        <h1>{{name.split('').reverse().join('')}}</h1>
+        <h2>{{name2}}</h2> -->
+
+        <input type="text" v-model='firstname' placeholder="第一个名">
+        <input type="text" v-model='secondname' placeholder="第二个名">
+        <input type="text" v-model='thirdname' placeholder="第三个名">
+       <!-- TOM.JSON.JERRY -->
+        <h1>这个人的全名是{{fullName | upper(123)  | lower | upper}}</h1>
+        <!-- | 可以写很多次但是最后结果是最后一个的效果 -->
+
+    </div>
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+    el:'#app',
+    data:{
+        name:'',
+        firstname:'TOM',
+        secondname:'JSON',
+        thirdname:'JERRY'
+    },
+    computed:{
+        name2(){
+            //name2 就是依赖于 this.name的
+            //只要 this.name 变化 就会触发这个函数
+            // console.log(this.name);
+            let str = this.name.split('').reverse().join('')
+                return str;
+        },
+        fullName(){
+            return `${this.firstname}·${this.secondname}·${this.thirdname}`
+        }
+    },
+    filters:{
+        upper(val,n){
+            console.log(n);
+            return val.toUpperCase();
+            
+        },
+        lower(val){
+            return val.toLowerCase();
+        }
+    }
+    })
+
+
+
+
+</script>

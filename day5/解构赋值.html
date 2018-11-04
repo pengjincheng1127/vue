@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// let ary = [1,2,3,4,5,6]
+// let a1 =ary[0];
+// let a2 = ary[1];
+
+    /*数组解构赋值
+    前面的数组放变量后边的数组放置
+
+    赋值结果 是按照对应位置赋值
+    */
+    // let [a1,a2,a3,,,a4] = ary;
+    // let a1 =ary[0];
+    // let a2 = ary[1];
+    // let a3 = ary[2];
+    // let a4 = ary[5];
+    // let a5 = ary[6];
+
+
+    // let x =12;
+    // let y =13;
+    // //  //不添加变量得情况下互换 x y 的值；
+    // // x=x+y;//x变成了两者之和
+    // // y=x-y;//y变成了两者之和减去y------x
+    // // x=x-y;//变成 两者之和 减去 y --> 就是把 y之前的值赋给x
+    
+    // // es6得做法  数组结构赋值
+    // [x,y] = [y,x];//[y,x] = [12,13]
+    // console.log(x,y);
+   
+   
+   
+   /*
+   对象得解构赋值
+   按照名称进行解构赋值
+   
+   
+   */
+    // let {name,age,sex} =  {name:"zf",age:9};
+    // let{name,age,sex} = obj;
+    /* 
+    let name = obj.name;
+    let age = obj.age;
+    let sex = obj.sex;
+    */
+
+
+    /*
+    扩展运算符
+
+    */
+    let arr1 = [1, 2, 3];
+    let arr2 = [...arr1, ...arr1, 4, 5, 6];
+    let arr3 = [arr1, arr1, 4, 5, 6];
+
+
+
+    let obj1 ={name:"zf",age:9};
+    let obj2 ={...obj1,sex:1,name2:12}
+
+    let obj3 ={...obj1};
+    let obj4 =obj1;
+    
+
+    /*  
+    math,
+    箭头函数
+    */
+
+</script>
+</html>
